@@ -24,7 +24,7 @@ Operation:	- Start the script using your method of choice.
 		- Confirm the operation ;-)
 			
 Here is a sample output:
-
+```
 Create USB Drive for Windows Installation
 Please insert a USB key and press Enter:
 
@@ -63,3 +63,4 @@ StorageType       : 1
 PSComputerName    :
 
 Cliquez sur Entrée pour continuer...:
+```
