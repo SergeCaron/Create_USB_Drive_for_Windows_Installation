@@ -18,11 +18,11 @@ Caution:	This script requires elevated execution privileges.
 			Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 			
 Operation:
-	- [ ] Start the script using your method of choice.
-	- [ ] Locate the Windows Installation ISO for which you want a USB key
-	- [ ] Insert a USB key and press ENTER
-	- [ ] Specify the BIOS boot architecture (MBR or UEFI)
-	- [ ] Confirm the operation ;-)
+- [ ] Start the script using your method of choice.
+- [ ] Locate the Windows Installation ISO for which you want a USB key
+- [ ] Insert a USB key and press ENTER
+- [ ] Specify the BIOS boot architecture (MBR or UEFI)
+- [ ] Confirm the operation ;-)
 			
 Here is a sample output:
 
