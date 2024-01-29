@@ -5,16 +5,16 @@ Create USB Drive for Windows Installation
 	Quickly create a UEFI or MBR installation media on a USB key without
 	regards to the size of the original Microsoft install.wim file.
 			
-Caution:	This script requires elevated execution privileges.
-			
-		Quoting from Microsoft's "about_Execution_Policies" : "PowerShell's
-		execution policy is a safety feature that controls the conditions
-		under which PowerShell loads configuration files and runs scripts."
+>Caution:	This script requires elevated execution privileges.
+	
+> Quoting from Microsoft's "about_Execution_Policies" : "PowerShell's
+execution policy is a safety feature that controls the conditions
+under which PowerShell loads configuration files and runs scripts."
 		
-		In order to execute this script using a right-click "Run with PowerShell",
-		the user's session must be able to run unsigned scripts and perform
-		privilege elevation. Use any configuration that is the equivalent of the
-		following commnand executed from an elevated PowerShell prompt:
+> In order to execute this script using a right-click "Run with PowerShell",
+the user's session must be able to run unsigned scripts and perform
+privilege elevation. Use any configuration that is the equivalent of the
+following commnand executed from an elevated PowerShell prompt:
 			
 			Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 			
