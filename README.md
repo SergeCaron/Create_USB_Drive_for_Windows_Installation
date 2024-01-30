@@ -2,7 +2,8 @@
 Create USB Drive for Windows Installation
  
 ## Purpose:
-Quickly create a UEFI or MBR installation media on a USB key without regards to the size of the original Microsoft install.wim file.
+
+> Quickly create a UEFI or MBR installation media on a USB key without regards to the size of the original Microsoft install.wim file.
 ------
 >Caution:	This script requires elevated execution privileges.
 
