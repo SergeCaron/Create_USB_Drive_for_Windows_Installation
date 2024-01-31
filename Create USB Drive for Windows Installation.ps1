@@ -1,7 +1,7 @@
 ##******************************************************************
 ## Revision date: 2024.01.31
 ##
-##		2021.04é01: Proof of concept / Initial release
+##		2021.04.01: Proof of concept / Initial release
 ##		2024.01.31: Default to UEFI instead of MBR
 ##
 ## Copyright (c) 2021-2024 PC-Évolution enr.
