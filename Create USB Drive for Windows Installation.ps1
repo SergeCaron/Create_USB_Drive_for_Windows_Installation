@@ -1,7 +1,10 @@
 ##******************************************************************
-## Revision date: 2021.04.01
+## Revision date: 2024.01.31
 ##
-## Copyright (c) 2021 PC-Évolution enr.
+##		2021.04é01: Proof of concept / Initial release
+##		2024.01.31: Default to UEFI instead of MBR
+##
+## Copyright (c) 2021-2024 PC-Évolution enr.
 ## This code is licensed under the GNU General Public License (GPL).
 ##
 ## THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
