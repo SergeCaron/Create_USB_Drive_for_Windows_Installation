@@ -160,7 +160,7 @@ switch ($BootMode) {
 
 		# Display directory of imaging file
 		$ImagingFile = $ISODriveLetter + ":\sources\install."
-		$ImagingFile += If ( Test-Path -Path $($ImagingFile + "wim") -PathType leaf) {"wim"} else {"esd"}
+		$ImagingFile += If ( Test-Path -Path $($ImagingFile + "wim") -PathType leaf) { "wim" } else { "esd" }
 		dism /Get-ImageInfo /ImageFile:$ImagingFile
 
 		# Split image files larger than the maximum FAT32 file size
