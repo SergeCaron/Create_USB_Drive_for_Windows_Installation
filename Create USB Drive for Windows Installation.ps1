@@ -1,8 +1,11 @@
 ##******************************************************************
-## Revision date: 2024.03.13
+## Revision date: 2025.02.03
 ##
 ##		2021.04.01: Proof of concept / Initial release
 ##		2024.01.31: Default to UEFI instead of MBR
+##		2025.02.03:	Allow ESD and WIM extensions in Windows Imaging files
+##					Display inventory of the Windows image
+##					Do not use .Net [math]
 ##
 ## Copyright (c) 2021-2024 PC-Évolution enr.
 ## This code is licensed under the GNU General Public License (GPL).
@@ -155,8 +158,13 @@ switch ($BootMode) {
 		# Copy Files to USB 
 		Copy-Item -Path ($ISODriveLetter + ":\*") -Destination ($Volume.DriveLetter + ":\") -Recurse -ErrorAction SilentlyContinue -ErrorVariable $Junk
 
-		$ImagingFile = $ISODriveLetter + ":\sources\install.wim"
-		If ((Get-Item $ImagingFile).Length -gt [math]::(4GB - 4096)) {
+		# Display directory of imaging file
+		$ImagingFile = $ISODriveLetter + ":\sources\install."
+		$ImagingFile += If ( Test-Path -Path $($ImagingFile + "wim") -PathType leaf) {"wim"} else {"esd"}
+		dism /Get-ImageInfo /ImageFile:$ImagingFile
+
+		# Split image files larger than the maximum FAT32 file size
+		If ((Get-Item $ImagingFile).Length -gt (4GB - 4096)) {
 			# Split Install
 			$SWMFile = $Volume.DriveLetter + ":\sources\install.swm"
 			dism /Split-Image /ImageFile:"$ImagingFile" /SWMFile:"$SWMFile" /FileSize:4096
