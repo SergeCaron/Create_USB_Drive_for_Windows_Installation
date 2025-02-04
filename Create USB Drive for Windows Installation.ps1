@@ -87,7 +87,7 @@ $ISOFile = $FileBrowser.FileName
 Do {
 	$USBDrive = Get-Disk | Where-Object BusType -EQ "USB"
 	# Avoid prompting if drive is already inserted ;-)
-	If ($USBDrive -eq $Null)
+	If ($Null -eq $USBDrive)
 	{ Read-Host "Please insert a USB key and press Enter" }
 	else {
 		# Display the attributes: there may be more than one USB disk!
@@ -111,7 +111,7 @@ Do {
 			}
 		}
 	}
-} while ($USBDrive -eq $Null)
+} while ($Null -eq $USBDrive)
 
 # Select Boot Mode
 $TypeUEFI = New-Object System.Management.Automation.Host.ChoiceDescription '&UEFI', 'Partitiontype: UEFI'
